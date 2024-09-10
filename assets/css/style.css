@@ -28,7 +28,8 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 1.2em 1.5em;
-  position: fixed;
+  position: sticky;
+  top: 12px;
   left: 12px;
   right: 12px;
   z-index: 99;
@@ -66,7 +67,6 @@ header nav li a::before {
 
 /* MAIN */
 main {
-  margin-top: 105px;
   background-color: #fff;
   box-shadow: 0 3px 3px #444;
   padding: 2em 0.7em;
@@ -301,6 +301,11 @@ footer a {
   color: #f7555d;
 }
 
+.calendar,
+.social {
+  color: #2d5fbf;
+}
+
 .buttons i {
   font-size: 18px;
   padding: 0.7rem;
@@ -318,6 +323,26 @@ aside > div i[class$="tag"] {
   font-size: 30px;
 }
 
+main p:nth-of-type(2) {
+  position: relative;
+}
+
+main p img {
+  display: block;
+  border: 2.5px solid #00a0c6;
+  margin-right: 0.3rem;
+  width: 100%;
+}
+
+.img-wrapper {
+  width: 40px;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  border: 2.5px solid #a02571;
+  display: inline-block;
+  float: left;
+}
+
 @media screen and (max-width: 699px) {
   .calendar {
     right: -10px;
@@ -331,15 +356,9 @@ aside > div i[class$="tag"] {
 }
 
 @media screen and (max-width: 575px) {
-  main {
-    margin-top: 165px;
-  }
 }
 
 @media screen and (min-width: 576px) {
-  main {
-    margin-top: 165px;
-  }
 }
 
 @media screen and (min-width: 700px) {
@@ -377,10 +396,6 @@ aside > div i[class$="tag"] {
     top: 50px;
   }
 
-  main article p:nth-of-type(2) {
-    color: red;
-  }
-
   .img-container img {
     width: 40px;
   }
@@ -391,6 +406,7 @@ aside > div i[class$="tag"] {
     font-size: 2rem;
   }
 
+  main p,
   main li {
     line-height: 3rem;
   }
@@ -406,6 +422,10 @@ aside > div i[class$="tag"] {
   table {
     margin-inline: auto;
     margin-block: 4.5rem;
+  }
+
+  .img-wrapper {
+    width: 60px;
   }
 }
 
@@ -512,9 +532,5 @@ aside > div i[class$="tag"] {
     font-size: 1.5rem;
     width: 65%;
     margin-inline: auto;
-  }
-
-  main {
-    margin-top: 105px;
   }
 }
